@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RPG-Characters\RPG-Characters.csproj" />
+  </ItemGroup>
+
 </Project>

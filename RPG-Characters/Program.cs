@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG_Characters.Charachters;
+using System;
 
 namespace RPG_Characters
 {
@@ -6,7 +7,13 @@ namespace RPG_Characters
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Mage Peppi = new Mage("Peppi");
+            Warrior Anton = new Warrior();
+            Anton.Name = "Anton";
+            Peppi.PrintCharacterSheet();
+            Anton.PrintCharacterSheet();
+
         }
     }
 }
