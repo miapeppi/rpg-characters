@@ -14,17 +14,18 @@ namespace RPG_Characters.Charachters
             TotalPrimaryAttribute = new PrimaryAttribute(5, 1, 1, 8);
             SecondaryAttribute = new SecondaryAttribute(TotalPrimaryAttribute);
         }
-
         public Mage(string name): base(name)
         {
             BasePrimaryAttribute = new PrimaryAttribute(5, 1, 1, 8);
             TotalPrimaryAttribute = new PrimaryAttribute(5, 1, 1, 8);
             SecondaryAttribute = new SecondaryAttribute(TotalPrimaryAttribute);
         }
-
         public override void LevelUp()
         {
-            throw new NotImplementedException();
+            Level += 1;
+            BasePrimaryAttribute += new PrimaryAttribute(3, 1, 1, 5);
+            TotalPrimaryAttribute += new PrimaryAttribute(3, 1, 1, 5);
+            SecondaryAttribute = new SecondaryAttribute(TotalPrimaryAttribute);
         }
     }
 }

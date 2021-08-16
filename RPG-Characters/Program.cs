@@ -8,11 +8,10 @@ namespace RPG_Characters
         static void Main(string[] args)
         {
 
-            Mage Peppi = new Mage("Peppi");
-            Warrior Anton = new Warrior();
-            Anton.Name = "Anton";
-            Peppi.PrintCharacterSheet();
-            Anton.PrintCharacterSheet();
+            Mage mage = new Mage("Mage");
+            mage.PrintCharacterSheet();
+            mage.LevelUp();
+            mage.PrintCharacterSheet();
 
         }
     }

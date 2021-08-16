@@ -18,7 +18,7 @@ namespace RPG_Characters.Charachters
             Health = totalAtribute.Vitality * 10;
             ArmorRating = totalAtribute.Strength + totalAtribute.Dexterity;
             ElementalResistance = totalAtribute.Intelligence;
- 
+            Damage = 1; // Wating for the calculation
         }
     }
 }

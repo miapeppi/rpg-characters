@@ -14,17 +14,20 @@ namespace RPG_Characters.Charachters
         public PrimaryAttribute TotalPrimaryAttribute { get; set; }
         public SecondaryAttribute SecondaryAttribute { get; set; }
 
+        // Default constructor creating a new charactar and adding starting level 1 to it
         public Hero()
         {
             Level = 1;
         }
 
+        // Overloaded constructor creating a new character and adding a name and a starting level 1 to it
         public Hero(string name)
         {
             Level = 1;
             Name = name;
         }
 
+        // Abstract method for leveling up, that every subclass inherit
         public abstract void LevelUp();
 
         public void PrintCharacterSheet()
@@ -38,7 +41,7 @@ namespace RPG_Characters.Charachters
             sb.AppendLine($"Health: {SecondaryAttribute.Health}");
             sb.AppendLine($"Armor rating: {SecondaryAttribute.ArmorRating}");
             sb.AppendLine($"Elementa resistance: {SecondaryAttribute.ElementalResistance}");
-            //sb.AppendLine($"DPS: {SecondaryAttribute.Health}");
+            sb.AppendLine($"DPS: {SecondaryAttribute.Damage}");
             Console.WriteLine(sb);
         }
     }

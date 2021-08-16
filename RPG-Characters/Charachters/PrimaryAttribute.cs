@@ -12,6 +12,7 @@ namespace RPG_Characters.Charachters
         public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Intelligence { get; set; }
+        public PrimaryAttribute() { }
 
         public PrimaryAttribute(int vitality, int strength, int dexterity, int intelligence)
         {
@@ -19,7 +20,16 @@ namespace RPG_Characters.Charachters
             Strength = strength;
             Dexterity = dexterity;
             Intelligence = intelligence;
-
+        }
+        public static PrimaryAttribute operator + (PrimaryAttribute baseLevel, PrimaryAttribute levelingUp)
+        {
+            return new PrimaryAttribute()
+            {
+                Vitality = baseLevel.Vitality + levelingUp.Vitality,
+                Strength = baseLevel.Strength + levelingUp.Strength,
+                Dexterity = baseLevel.Dexterity + levelingUp.Dexterity,
+                Intelligence = baseLevel.Intelligence + levelingUp.Intelligence,
+            };
         }
     }
 }
