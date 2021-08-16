@@ -1,4 +1,5 @@
 ﻿using RPG_Characters.Charachters;
+using RPG_Characters.Items;
 using System;
 
 namespace RPG_Characters
@@ -12,6 +13,7 @@ namespace RPG_Characters
             mage.PrintCharacterSheet();
             mage.LevelUp();
             mage.PrintCharacterSheet();
+
 
         }
     }

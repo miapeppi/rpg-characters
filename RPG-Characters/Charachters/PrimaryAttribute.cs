@@ -12,8 +12,13 @@ namespace RPG_Characters.Charachters
         public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Intelligence { get; set; }
-        public PrimaryAttribute() { }
+        
+        // Default constructor is needed for overloading the + operation
+        public PrimaryAttribute() {
 
+        }
+
+        // Overloaded constructor
         public PrimaryAttribute(int vitality, int strength, int dexterity, int intelligence)
         {
             Vitality = vitality;
@@ -21,6 +26,8 @@ namespace RPG_Characters.Charachters
             Dexterity = dexterity;
             Intelligence = intelligence;
         }
+
+        // Overloading the + operator, for making it easier to increase the level
         public static PrimaryAttribute operator + (PrimaryAttribute baseLevel, PrimaryAttribute levelingUp)
         {
             return new PrimaryAttribute()

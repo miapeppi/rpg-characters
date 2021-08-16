@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG_Characters.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,21 +10,20 @@ namespace RPG_Characters.Charachters
     public abstract class Hero
     {
         public string Name { get; set; }
-        public int Level { get; set; }
+        public int Level { get; set; } = 1; // Every characters level at the begin is 1
         public PrimaryAttribute BasePrimaryAttribute { get; set; }
         public PrimaryAttribute TotalPrimaryAttribute { get; set; }
         public SecondaryAttribute SecondaryAttribute { get; set; }
 
-        // Default constructor creating a new charactar and adding starting level 1 to it
+        // Default constructor 
         public Hero()
         {
-            Level = 1;
+            
         }
 
-        // Overloaded constructor creating a new character and adding a name and a starting level 1 to it
+        // Overloaded constructor creating a new character and adding a name to it
         public Hero(string name)
         {
-            Level = 1;
             Name = name;
         }
 
