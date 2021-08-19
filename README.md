@@ -1,6 +1,7 @@
 # RPG Characters
 
 .NET Core Console Application.
+
 First weekly assignment of Experis Academy.
 
 ## Task
