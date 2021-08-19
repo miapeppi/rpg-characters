@@ -8,7 +8,6 @@ namespace RPG_CharactersTests
     public class ItemsTests
     {
         #region Equipping items
-
         [Fact]
         public void EquipItem_WarriorTryToEquipAxeWhichIsTooHighLevel_ShouldTrowInvalidWeaponException()
         {
@@ -127,7 +126,6 @@ namespace RPG_CharactersTests
         #endregion
 
         #region DPS Calculation
-        
         [Fact]
         public void CalculateDPS_CreateWarrior_ShouldReturnDPS()
         {

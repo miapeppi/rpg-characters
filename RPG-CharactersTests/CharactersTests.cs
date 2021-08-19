@@ -7,7 +7,6 @@ namespace RPG_CharactersTests
     public class CharactersTests
     {
         #region Character creation
-
         [Fact]
         public void ConstructorMage_InitializegMage_ShouldCreateLevel1Mage()
         {
@@ -44,7 +43,6 @@ namespace RPG_CharactersTests
             Assert.Equal(expectedStrength, actualStrength);
             Assert.Equal(expectedDexterity, actualDexterity);
             Assert.Equal(expectedIntelligence, actualIntelligence);
-
         }
 
         [Fact]
@@ -68,7 +66,6 @@ namespace RPG_CharactersTests
             Assert.Equal(expectedStrength, actualStrength);
             Assert.Equal(expectedDexterity, actualDexterity);
             Assert.Equal(expectedIntelligence, actualIntelligence);
-
         }
 
         [Fact]
@@ -92,7 +89,6 @@ namespace RPG_CharactersTests
             Assert.Equal(expectedStrength, actualStrength);
             Assert.Equal(expectedDexterity, actualDexterity);
             Assert.Equal(expectedIntelligence, actualIntelligence);
-
         }
 
         [Fact]
@@ -116,13 +112,10 @@ namespace RPG_CharactersTests
             Assert.Equal(expectedStrength, actualStrength);
             Assert.Equal(expectedDexterity, actualDexterity);
             Assert.Equal(expectedIntelligence, actualIntelligence);
-
         }
-
         #endregion
 
         #region Leveling Up
-
         [Fact]
         public void LevelUpMage_MageGainsLevel_ShoudldLevelUpToLevel2()
         {
@@ -267,7 +260,6 @@ namespace RPG_CharactersTests
             Assert.Equal(expectedArmorRating, actualArmorRating);
             Assert.Equal(expectedElementalResistance, actualElementalResistance);
         }
-
         #endregion
     }
 }
