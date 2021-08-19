@@ -8,10 +8,10 @@ namespace RPG_Characters.Charachters
 {
     public class PrimaryAttribute
     {
-        public int Vitality { get; set; }
-        public int Strength { get; set; }
-        public int Dexterity { get; set; }
-        public int Intelligence { get; set; }
+        public int Vitality { get; set; } = 0;
+        public int Strength { get; set; } = 0;
+        public int Dexterity { get; set; } = 0;
+        public int Intelligence { get; set; } = 0;
         
         // Default constructor is needed for overloading the + operation
         public PrimaryAttribute() {
@@ -27,7 +27,7 @@ namespace RPG_Characters.Charachters
             Intelligence = intelligence;
         }
 
-        // Overloading the + operator, for making it easier to increase the level
+        // Overloading the + operator, to making it easier to increase the level
         public static PrimaryAttribute operator + (PrimaryAttribute baseLevel, PrimaryAttribute levelingUp)
         {
             return new PrimaryAttribute()
@@ -36,6 +36,18 @@ namespace RPG_Characters.Charachters
                 Strength = baseLevel.Strength + levelingUp.Strength,
                 Dexterity = baseLevel.Dexterity + levelingUp.Dexterity,
                 Intelligence = baseLevel.Intelligence + levelingUp.Intelligence,
+            };
+        }
+
+        // Overloading the * operation, to making it to increase multiple levels
+        public static PrimaryAttribute operator * (PrimaryAttribute baseLevel, int number)
+        {
+            return new PrimaryAttribute()
+            {
+                Vitality = baseLevel.Vitality * number,
+                Strength = baseLevel.Strength * number,
+                Dexterity = baseLevel.Dexterity * number,
+                Intelligence = baseLevel.Intelligence * number
             };
         }
     }
