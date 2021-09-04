@@ -48,7 +48,7 @@ namespace RPG_Characters.Charachters
         /// Method for leveling up the hero precise amount of levels and increasing the primary and secondary attributes.
         /// </summary>
         /// <param name="levels">The amount of levels which the hero levels up</param>
-        /// <exception cref="ArgumentException">If character is leveling up 0 or negative number of levels exception will be thrown</exception>
+        /// <exception cref="ArgumentException">If character is leveling up 0 or negative number of levels exception will be thrown.</exception>
         public abstract void LevelUp(int levels);
 
         /// <summary>
