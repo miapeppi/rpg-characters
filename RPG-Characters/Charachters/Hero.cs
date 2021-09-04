@@ -11,7 +11,7 @@ namespace RPG_Characters.Charachters
     public abstract class Hero
     {
         public string HeroName { get; set; }
-        public int HeroLevel { get; set; } = 1; // Every characters level at the begin is 1
+        public int HeroLevel { get; set; } = 1; // Every character's level at the beginning is 1
         public PrimaryAttribute BasePrimaryAttribute { get; set; }
         public PrimaryAttribute TotalPrimaryAttribute { get; set; }
         public SecondaryAttribute SecondaryAttribute { get; set; }
@@ -47,7 +47,7 @@ namespace RPG_Characters.Charachters
         /// <summary>
         /// Method for leveling up the hero precise amount of levels and increasing the primary and secondary attributes.
         /// </summary>
-        /// <param name="levels">The ammount of levels which the hero levels up</param>
+        /// <param name="levels">The amount of levels which the hero levels up</param>
         /// <exception cref="ArgumentException">If character is leveling up 0 or negative number of levels exception will be thrown</exception>
         public abstract void LevelUp(int levels);
 
@@ -66,7 +66,7 @@ namespace RPG_Characters.Charachters
         public abstract string EquipItem(Weapon weapon);
 
         /// <summary>
-        /// Method for printing heros statistic sheet
+        /// Method for printing hero's statistic sheet
         /// </summary>
         public void PrintCharacterSheet()
         {
