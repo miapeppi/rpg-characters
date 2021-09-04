@@ -14,7 +14,7 @@ namespace RPG_Characters.Charachters
         public int ElementalResistance { get; set; }
         public double DPS { get; set; }
 
-        // Overloaded constructor calculating DPS with no weapon equippd
+        // Overloaded constructor calculating DPS with no weapon equipped
         public SecondaryAttribute(PrimaryAttribute totalAtribute, double damageAttribute)
         {
             Health = totalAtribute.Vitality * 10;
@@ -24,9 +24,9 @@ namespace RPG_Characters.Charachters
         }
 
         /// <summary>
-        /// Method to uppdate secondaryattributes when there is changes in the primaryattributes
+        /// Method to update secondary attributes when there is changes in the primary attributes
         /// </summary>
-        /// <param name="totalAtribute">Updated totalattributes with e.g. new armor added</param>
+        /// <param name="totalAtribute">Updated total attributes with e.g. new armor added</param>
         public void Update(PrimaryAttribute totalAtribute)
         {
             Health = totalAtribute.Vitality * 10;
@@ -35,10 +35,10 @@ namespace RPG_Characters.Charachters
         }
 
         /// <summary>
-        /// Method to uppdate secondaryattributes when there is new weapon equipped
+        /// Method to update secondary attributes when there is new weapon equipped
         /// </summary>
-        /// <param name="totalAtribute">Updated totalattributes</param>
-        /// <param name="damageAttribute">Heros damageattribute</param>
+        /// <param name="totalAtribute">Updated total attributes</param>
+        /// <param name="damageAttribute">Hero's damage attribute</param>
         /// <param name="weapon">Weapon what have been added</param>
         public void Update(PrimaryAttribute totalAtribute, double damageAttribute, Weapon weapon)
         {
